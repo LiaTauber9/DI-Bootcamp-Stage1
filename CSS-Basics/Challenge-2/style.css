@@ -1,0 +1,39 @@
+body{
+    text-align: center;
+    align-items: center;
+    background-color: rgb(248, 171, 135);
+}
+
+#wrap{
+    background-color:white;
+    width: 750px;
+    margin: auto;
+    padding: 0px 0px 15px 0px;
+    border: 3px black;
+    border-style: dotted;
+}
+
+h1{
+    padding: 8px auto;
+    margin: 0px;
+    width: 100%;
+    border-bottom: 3px black dotted;
+    font-style: italic;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+#pBox{
+    display: table-cell;
+    text-align: left;
+    padding: 7px 7px 0px 7px;
+}
+
+ul li{
+    list-style: none
+}
+
+li::first-letter{
+    font-size: 1.5em;
+    font-weight: bold;
+}

@@ -1,0 +1,28 @@
+body{
+    /* text-align: center; */
+    align-items: center;
+}
+
+#wrap{
+    background-color:rgb(34 219 238);
+    width: 750px;
+    margin: auto;
+    padding: 15px 8px 15px 5px;
+}
+
+#list_box{
+    text-align: center;
+}
+
+h1{
+    margin: 0px;
+}
+
+ul li{
+    list-style: none
+}
+
+li::first-letter{
+    font-size: 1.5em;
+    font-weight: bold;
+}
