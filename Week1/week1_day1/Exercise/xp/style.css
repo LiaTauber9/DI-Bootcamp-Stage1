@@ -1,0 +1,54 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0px;
+    padding: 3vh 0 7vh 0;
+    background-color: rgb(246, 161, 132);
+    text-align: center;
+    font-size: 1.3em;
+}
+
+.background_div{
+    position: relative;
+    /* height: 100vh; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 5vh 0;
+}
+
+.background{
+    position: absolute;
+    height: 100%;
+    width:100%;
+    object-fit: cover;
+    opacity: 0.5;
+}
+
+.card{
+    text-align: left;
+    margin: 0px 10vw;
+    opacity: 1;
+}
+
+.cards_box{
+    /* display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-items: center; */
+}
+
+.card.lion_card{
+    display: inline-block;
+    width: 40vw;
+    text-align: center;
+    border: 1px solid brown;
+    margin: 1vw;
+}
+
+.card.lion_card > hr{
+    border: 1px solid brown;
+}
+
