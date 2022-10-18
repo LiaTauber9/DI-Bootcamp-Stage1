@@ -1,4 +1,6 @@
-
+body{
+  margin: 0px;
+}
 #section1{
     height: 100vh;
     width: 100%;
@@ -84,3 +86,24 @@ p span{
     border: 1px solid black;
   }
 
+  .note{
+    width: 50vw;
+  }
+
+  @media screen and (max-width: 768px) {
+    .note {
+      width: 90%;
+    }
+  }
+
+  .videos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .video {
+    width: 270px;
+    margin-bottom: 30px;
+  }

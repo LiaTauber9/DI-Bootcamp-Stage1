@@ -1,0 +1,27 @@
+.container_index{
+    background-image: url('images/background1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.innerBox_index {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    background-color: white;
+}
+
+.bgimg_index{
+    background-image: url('images/background1.png');
+}
+
+.box_index{
+    justify-content: center;
+}
+
+.portrait_index {
+    border-radius: 50%;
+    height: 30vh;
+    width: fit-content;
+}

@@ -1,0 +1,100 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+ body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: Source, Sans, Pro;
+ }
+
+ aside, main{
+    margin: 1rem;
+    padding: 1rem;
+    border: 0.1rem solid rgb(19, 42, 109);
+    display: flex;
+    justify-content: start;
+    flex-grow: 1;  
+ }
+
+ aside{
+    flex-direction: row;
+    background-color: rgb(172, 192, 252);
+ }
+
+ .box{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    
+ }
+
+ .side_box{
+    justify-content: flex-end;
+    padding: 1rem;
+    font-size: 1em;
+    
+ }
+.side_box p, .side_box a{
+    font-size: 0.7em;
+    font-family: 'Verdana', Arial, Helvetica, sans-serif;
+    color: rgb(19, 42, 109);
+}
+.side_box *{
+    padding: 0.2rem 0;
+}
+ 
+ img{
+    width: 30vw;
+    border-radius: 20px;
+ }
+
+ main{
+    flex-direction: column;
+    padding: 0;
+ }
+
+ main h1{
+    background-color: rgb(198, 210, 249);
+    width: 100%;
+    margin-top: 1rem;
+    font-size: 1rem;
+    padding: 0.5rem 0px 0px 0.5rem ;
+    
+ }
+
+ hr{
+    width: 100%;
+    border: 0.1rem solid rgb(19, 42, 109) ;
+ }
+
+ main p{
+    margin: 0.5rem;
+ }
+
+ main ul{
+    margin: 0.5rem 0.5rem 0.5rem 1.5rem ;
+ }
+
+ main p, main li{
+    font-family: 'Verdana', Arial, Helvetica, sans-serif;
+ }
+
+ #prof_exp h2{
+    font-size: 1rem;
+ }
+
+ @media only screen and (min-width: 760px) {
+    body{
+        flex-direction: row;
+    }
+    aside{
+        flex-direction: column;
+    }
+    img{
+        width: 20vw;
+    }
+    
+ }

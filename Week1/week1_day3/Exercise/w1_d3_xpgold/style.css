@@ -1,0 +1,170 @@
+body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+body *{
+    /* border: 0.5px solid; */
+    /* margin: 0; */
+
+}
+
+/* .background{
+    position: relative; 
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
+
+.background::before{
+    height: 100vh;
+    width: 100%;
+    padding: 0;
+    content: "";
+    background-image: url(img.PNG);
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.25;
+}
+
+.container{
+    position: relative; 
+    width: 100%;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    opacity: 1;
+}
+
+header{
+    width: 65vw;
+    height: 8vh;
+    /* align-self: center; */
+    text-align: center;
+    /* margin: auto; */
+}
+
+.details{
+    display: flex;
+    flex-direction: row;
+    height: 30vh;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.details div{
+    text-align: center;
+}
+
+.details *{
+    margin: 0;
+}
+
+.details h1{
+    color: blue;
+    font-size: 2em; 
+}
+
+.cards{
+    display: flex;
+    flex-direction: row;
+    height: 50vh;
+    width: 100%;
+    justify-content: space-around;
+}
+
+
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 15rem;
+    width: 22rem;
+    background-color: white;
+}
+
+.lower, .uper{
+    padding: 0.5rem;
+}
+
+.lower{
+    display: flex;
+    height: 40%;
+    color: white;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+img{
+    display: fl;
+    height: 4rem;
+    margin-top: -2rem;
+    border-radius: 50%;    
+}
+
+#card1{
+    border: 0.5px solid chocolate;
+    align-self: flex-start; 
+}
+
+#card1 .lower{
+    background-color: chocolate;
+} 
+
+#card2{
+    border: 0.5px solid palevioletred;
+    align-self: flex-end; 
+}
+
+#card2 .lower{
+    background-color: palevioletred;
+} 
+
+#card3{
+    border: 0.5px solid lightseagreen;
+    align-self: center; 
+}
+
+#card3 .lower{
+    background-color: lightseagreen;
+} 
+
+@media only screen and (max-width: 600px) {
+    .container{
+        height: fit-content;
+    }
+    .cards{
+        flex-direction: column;
+        height: fit-content;
+    }
+    #card1, #card2, #card3 {
+        align-self: center;
+        margin-bottom: 2rem;
+    }
+
+    header{
+        height: fit-content;
+        margin-bottom: 2remh;
+    }
+
+    .details{
+        height: fit-content;
+        margin-bottom: 2rem;
+        /* font-size: ; */
+    }
+    
+}

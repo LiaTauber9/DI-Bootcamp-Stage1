@@ -1,0 +1,122 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body * {
+    margin: 0;
+    font-family: cursive;
+    box-sizing: border-box;
+
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.bgimg {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    opacity: 0.3;
+}
+
+.box {
+    position: absolute;
+    top: 0;
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.content {
+    text-align: center;
+    width: 80vw;
+}
+
+.img {
+    height: 30vh;
+    width: 100%;
+    border-radius: 5px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background-color: white;
+    box-shadow: 10px 10px 20px #b88caf;
+}
+
+
+@media only screen and (min-width: 950px) {
+    .content{
+        width: 50vw;
+    }   
+}
+
+.navbar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: max-content;
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem;
+    background-color: white;
+    font-size: 0.8em;
+    border: 1px solid;
+    z-index: 1;
+}
+
+
+a, a:hover, a:focus, a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
+.navbar a {
+    padding: 0 1rem;
+}
+
+a:hover {
+    transform: rotate(15deg);
+    transition: all 0.3s;
+}
+
+@media only screen and (min-width: 600px) {
+    .navbar{
+        font-size: 1em;
+    }
+    .navbar a:first-child {
+        position: absolute;
+        left: 1rem;
+    }
+
+    .navbar a:last-child {
+        position: absolute;
+        right: 1rem;
+    }
+}
+
+.sticky {
+    color: #b73851;
+    transition: all 2s;
+    
+    border: 1px solid #b73851;
+    box-shadow: 1px 1px 5px #b73851;
+}

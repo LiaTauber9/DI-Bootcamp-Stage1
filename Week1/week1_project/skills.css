@@ -1,0 +1,45 @@
+.bgimg_skills, .img_skills{
+    background-image: url('images/background3.png');
+}
+
+.box_skills{
+    justify-content: center;
+}
+
+.skills {
+    padding: 0;
+    margin: 0;
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    justify-content: center;
+    gap: 1rem;
+    color: #b73851;
+}
+
+.skillItem {
+    min-width: 100px;
+    text-align: center;
+    list-style: none;
+    padding: 1rem 0;
+    font-size: 1.2rem;
+    border: 1px solid #b73851;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px #b73851;
+}
+
+
+@media only screen and (min-width: 950px){
+    .box_skills{
+        flex-direction: row;
+    }
+
+    .img_skills{
+        width: 30vw;
+    }
+
+    .skills {
+        grid-template-columns: repeat(4, 1fr);
+        justify-content: center;
+    }
+}

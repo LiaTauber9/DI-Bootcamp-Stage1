@@ -1,0 +1,21 @@
+.bgimg_about{
+    opacity: 0.2;
+}
+
+.img_about, .bgimg_about{
+    background-image: url('images/background2.png');
+}
+
+.img_about{
+    background-size: contain;
+}
+
+.box_about{
+    padding-top: 100px;
+}
+
+@media only screen and (min-width: 950px){
+    .img_about{
+        width: 50vw;
+    }
+}
