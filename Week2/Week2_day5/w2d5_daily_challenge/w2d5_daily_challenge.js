@@ -1,6 +1,6 @@
 function decrease(){
-    let buttllesArr = [99];
-    let buttlesSum = 99;
+    let buttlesSum = prompt("Enter number of beer buttles")*1;
+    let buttllesArr = [buttlesSum];
     for(let i = 1; buttlesSum > i; i++){
         buttllesArr.push(buttllesArr[i-1]-i)
         buttlesSum -= i; 
