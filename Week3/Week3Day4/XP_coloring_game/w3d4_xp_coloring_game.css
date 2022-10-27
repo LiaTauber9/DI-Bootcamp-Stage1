@@ -1,0 +1,48 @@
+html *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: gray;
+    display: flex;
+}
+#leftSection{
+    width: 20vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(8,1fr);
+    gap: 5px;
+    padding: 10px;
+
+}
+#btnClear{
+    background-color: white;
+    grid-column: 1/4;
+}
+.colorBox{
+    border: 1px solid black;
+    border-radius: 10px;
+}
+#rightContainer{
+    display: flex;
+    width: 80vw;
+    height: 96vh;
+    margin: auto;
+    overflow: hidden;
+}
+#rightSection{
+    width: 80vw;
+    height: 150vh;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 20px);
+    grid-template-rows: repeat(auto-fill, 20px);
+    gap: 1px;
+    
+    
+}
+.boardPart{
+    border: 1px solid black;
+    background-color: white;
+}
