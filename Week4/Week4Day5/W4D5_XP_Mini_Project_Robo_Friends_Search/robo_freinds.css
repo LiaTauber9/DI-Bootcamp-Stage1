@@ -1,0 +1,14 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#cards_container{
+    width: 90vw;
+}
+
+.card{
+    width: 18rem;
+}
