@@ -1,0 +1,1 @@
+document.getElementById('p').textContent = window.location.search.replace('?', '').replace(/&/g, '\n').replace(/=/g, ': ');
