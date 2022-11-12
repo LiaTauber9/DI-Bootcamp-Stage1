@@ -92,18 +92,19 @@ const morse = `{
   }`
   function toJs(json){
     const jsToObj = JSON.parse(json)
+    console.log(jsToObj.length);
     const prom1 = new Promise((resolve, reject) => { 
-        if(jsToObj.length != 0){
+        if(Object.keys(jsToObj).length != 0){
             resolve(jsToObj)
         } else{
-            reject(new Error('JSON is empty'))
+            reject('JSON is empty')
         }
     })
     return prom1
   }
 
   function toMorse(morseJS){
-    const promptString = prompt('enter a word').toLocaleLowerCase().replace(/ /g, '-').split(""); 
+    const promptString = prompt('enter a word').toLocaleLowerCase().split(""); 
     const prom2 = new Promise((resolve, reject) => {
         if(promptString.every(c=> morseJS[c])){
             resolve(promptString.map(c=>morseJS[c]))
