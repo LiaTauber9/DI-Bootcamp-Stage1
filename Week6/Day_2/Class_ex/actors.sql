@@ -13,11 +13,17 @@
 --     IS_TEMPLATE = False;
 SELECT * FROM actors
 
+UPDATE actors
+SET first_name = 'Maty'
+WHERE first_name = 'Matt'
+RETURNING *;
 
+UPDATE actors
+SET number_oscars = 4
+WHERE first_name = 'George' AND last_name = 'Clooney'
+RETURNING *
 
+ALTER TABLE actors RENAME COLUMN age TO birthDate
 
-
-
-
-
-
+DELETE FROM actors WHERE actor_id=2
+RETURNING *
