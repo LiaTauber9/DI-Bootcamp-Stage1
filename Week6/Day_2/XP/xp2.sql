@@ -57,7 +57,11 @@ ON city.country_id = country.country_id
 --  Write a query to get the customer’s id, names (first and last), 
 --  the amount and the date of payment 
 --  ordered by the id of the staff member who sold them the dvd.
-
+SELECT customer.customer_id, first_name, last_name, amount, payment_date, staff_id
+FROM customer
+INNER JOIN payment
+ON payment.customer_id = customer.customer_id
+ORDER BY staff_id
 
 
 
