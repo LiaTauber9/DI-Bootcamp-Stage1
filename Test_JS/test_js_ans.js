@@ -282,4 +282,4 @@ const Book1 = new Novel('Top Secret Shuttle Building Manual', 'Redacted', '2013-
 const Book2 = new Manual('Pride and Prejudice', 'Jane Austen', '1813-01-01', 432, 32);
 console.log(`Is the book ${Book1.title} should be thrown? ${Book1.isThrown()}`)
 console.log(`Is the book ${Book2.title} should be thrown? ${Book2.isThrown()}`)
-console.log(Book1.read(5));
+console.log(Book1.read(5));zaqq

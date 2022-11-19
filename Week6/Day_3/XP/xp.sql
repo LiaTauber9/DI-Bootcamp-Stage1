@@ -86,9 +86,35 @@ DROP TABLE customer_review;
 
 -- Your friend is at the store, and decides to rent a movie. He knows he wants to see 4 movies, but he can’t remember their names. Can you help him find which movies he wants to rent?
 -- The 1st film : The film is about a sumo wrestler, and one of the actors is Penelope Monroe.
-SELECT film_id FROM film_actor WHERE
+SELECT title FROM film
+INNER JOIN film_actor ON film_actor.film_id = film.film_id
+INNER JOIN actor ON actor.actor_id = film_actor.actor_id
+WHERE first_name = 'Penelope' AND last_name = 'Monroe' AND description ILIKE '%sumo wrestler%'
 -- The 2nd film : A short documentary (less than 1 hour long), rated “R”.
-
+SELECT title FROM film
+INNER JOIN film_category ON film_category.film_id = film.film_id
+INNER JOIN category ON category.category_id = film_category.film_id
+WHERE  category.name ILIKE 'documentary' 
+AND film.length <60
+AND film.rating = 'R'
 -- The 3rd film : A film that his friend Matthew Mahan rented. He paid over $4.00 for the rental, and he returned it between the 28th of July and the 1st of August, 2005.
+SELECT title FROM film
+INNER JOIN inventory ON inventory.film_id = film.film_id
+INNER JOIN rental ON rental.inventory_id = inventory.inventory_id
+INNER JOIN payment ON payment.rental_id = rental.rental_id
+INNER JOIN customer ON customer.customer_id = rental.customer_id
+WHERE customer.first_name = 'Matthew'
+AND customer.last_name = 'Mahan'
+AND payment.amount > 4.00
+AND rental.return_date BETWEEN  '2005-07-28' AND '2005-08-01' 
+SELECT * FROM rental
+-- The 4th film : His friend Matthew Mahan watched this film, as well. It had the word “c” in the title or description, and it looked like it was a very expensive DVD to replace.
 
--- The 4th film : His friend Matthew Mahan watched this film, as well. It had the word “boat” in the title or description, and it looked like it was a very expensive DVD to replace.
+SELECT film.title FROM film
+INNER JOIN inventory ON inventory.film_id = film.film_id
+INNER JOIN rental ON rental.inventory_id = inventory.inventory_id
+INNER JOIN customer ON customer.customer_id = rental.customer_id
+WHERE customer.first_name = 'Matthew'
+AND customer.last_name = 'Mahan'
+AND (film.description ILIKE '%boat%' OR film.title ILIKE '%boat%')
+AND replacement_cost > (SELECT AVG(replacement_cost) FROM film)
