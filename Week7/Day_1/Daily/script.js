@@ -1,13 +1,18 @@
+const {largeNumber, dateTime} = require('./main.js');
+
 //part 1
-const largNum = require('./main.js');
 const b = 5;
-console.log(largNum.largeNumber+b);
+console.log(largeNumber+b);
+
+//part 2
+const http = require('http');
+const server = http.createServer((req,res) => {
+    res.writeHead(200);
+    res.end('my first server')
+});
+server.listen(3000,() => {
+    console.log("I'm litening to port 3000");
+})
 
 //part 3
-const currentdate = new Date(); 
-const datetime = `The date and time are currently: ${currentdate.getDay()} ${currentdate.getMonth()} ${currentdate.getDate} ${currentdate.getFullYear()}`
-// + " @ "  
-//                 + currentdate.getHours() + ":"  
-//                 + currentdate.getMinutes() + ":" 
-//                 + currentdate.getSeconds();
-console.log(dateTime);
+console.log(dateTime());
