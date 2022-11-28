@@ -1,0 +1,15 @@
+.dib{
+    display: inline-block;
+}
+
+.mar{
+    margin: 20px;
+}
+
+.tac{
+    text-align: center;
+}
+
+.bor{
+    border: 5px solid black;
+}
