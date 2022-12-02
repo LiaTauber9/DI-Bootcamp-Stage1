@@ -1,0 +1,11 @@
+.task{
+    border: 3px solid gray;
+    border-radius: 5px;
+    width: 600px;
+    height: 70px;
+    font-size: 1.2rem;
+}
+
+p:hover{
+    text-decoration-line: line-through;
+}
