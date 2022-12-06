@@ -1,22 +1,21 @@
 import React from 'react'
 import {connect} from 'react-redux';
-import { sub } from '../actions';
-import { add } from '../actions';
+import { sub, add } from '../actions';
+import Increase from './Increase';
+import Decrease from './Decrease';
 
 class Counter extends React.Component{
     constructor(props){
         super(props)
     }
-    add = () => {}
-    sub = () => {}
 
     render(){
         console.log(this.props)
         return(
             <>
-            <button onClick={this.props.add}>+</button>
+            <Increase />
                 <span>{this.props.my_count}</span>
-            <button onClick={this.props.sub}>-</button>
+                <Decrease />
             </>
             
         )
