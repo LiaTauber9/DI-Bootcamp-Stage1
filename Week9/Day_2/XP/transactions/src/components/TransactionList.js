@@ -24,6 +24,7 @@ class TransactionList extends React.Component{
 
     render(){
         return(
+            <>
             <table>
                 <tbody>
                 {
@@ -42,6 +43,7 @@ class TransactionList extends React.Component{
                 }
                 </tbody>
             </table>
+            </>
         )
     }
 }
