@@ -31,11 +31,13 @@ class App extends React.Component {
 
   render() {
     const {robots,text} = this.props;
+    console.log('this.props.text',this.props.text);
+    const filteredRobots = robots.filter(item=>item.name.toLowerCase().includes(text.toLowerCase())) 
     return (
       <div>
         <Search />
         {
-          robots.map(element => {
+          filteredRobots.map(element => {
             return (
               <Robots robot={element} key={element.id}/>
             )
