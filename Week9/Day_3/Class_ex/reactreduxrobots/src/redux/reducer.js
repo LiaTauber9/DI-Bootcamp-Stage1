@@ -11,8 +11,7 @@ export const reducer = (state = initState, action = {}) => {
             return {...state, text:action.payload};
         case GET_ROBOT:
             console.log(action.payload);
-            const filteredRobots = action.payload.filter(item=>item.name.toLowerCase().includes(state.text.toLowerCase()))
-            return {...state, robots:filteredRobots}
+            return {...state, robots:action.payload}
         default: 
         return {...state}
     }
