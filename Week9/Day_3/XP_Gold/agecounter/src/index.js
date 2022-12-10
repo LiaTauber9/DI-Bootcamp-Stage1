@@ -6,13 +6,12 @@ import {createStore, applyMiddleware} from 'redux';
 import {Provider} from 'react-redux';
 import thunk from 'redux-thunk';
 import reportWebVitals from './reportWebVitals';
-import reducer from './redux/reducers.js';
-import { log } from './redux/middleware';
+import reducer from './redux/reducer.js';
 
 
 // import {myLogger} from './redux/logger.js'
 
-const middlewareEnhancer = applyMiddleware(log,thunk)
+const middlewareEnhancer = applyMiddleware(thunk)
 const store = createStore(reducer, middlewareEnhancer);
 
 

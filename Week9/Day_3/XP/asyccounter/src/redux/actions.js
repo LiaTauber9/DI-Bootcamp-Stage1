@@ -64,7 +64,3 @@ export const subAge = () => {
 //     console.log('middleware with thunk:  age: ',getState().age);
 // } 
 
-
-
-
-
