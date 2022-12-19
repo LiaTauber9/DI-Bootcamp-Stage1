@@ -1,6 +1,6 @@
 // modouls install - npm i bcrypt cookie-parser cors dotenv express jsonwebtoken pg pg-hstore sequelize nodemon
 
-import jwt from 'jsonwebtoken' 
+// import jwt from 'jsonwebtoken' 
 
 // const secreteCode = '1111' 
 //    //secrete admin signature
@@ -16,7 +16,6 @@ import jwt from 'jsonwebtoken'
 //    //callBack function to verify, if secrete is not correct or time expired => err
 
 import db from './config/dbElephantsql.js';
-import Users from './model/usersModel.js';
 import express  from 'express';
 import cookieParser from 'cookie-parser';
 import cors from 'cors';
