@@ -15,7 +15,6 @@ const getRobots = async(val)=>{
 
 const displayRobots = (list) =>{
     for(item of list){
-        // document.write(item.name)
         const card = document.createElement('div');
         card.textContent=item.name;
         card.classList.add('card');
