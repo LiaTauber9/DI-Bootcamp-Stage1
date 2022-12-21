@@ -14,7 +14,7 @@ app.use(express.urlencoded({extended:true}));
 app.post('/items', (req,res)=>{
     console.log(req.body);
     itemsArr.push(req.body);
-    res.json(itemsArr);
+    res.sendFile(__dirname+'/public/index.html')
 })
 app.get('/items', (req,res) => {
     res.json(itemsArr)
