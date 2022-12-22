@@ -1,7 +1,8 @@
 
 
 const getList = async()=>{
-    return await (await fetch('/items')).json()
+    return await (await fetch('/items', {
+        method: 'GET'})).json()
 }
 
 const addList = (list)=>{
