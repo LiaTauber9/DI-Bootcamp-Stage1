@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="registerForm" onsubmit="submitRegister(event)">
+        First Name <input placeholder="First Name" name="firstName"/>
+        Last Name <input placeholder="Last Name" name="lastName"/>
+        Email <input placeholder="Email" name="email"/>
+        User Name <input placeholder="User Name" name="userName"/>
+        Password <input placeholder="Password" name="password"/>
+        <input type="submit" name="submit" value="Register">
+    </form>
+    <form id="loginForm" onsubmit="submitLogin(event)">
+        User Name <input placeholder="User Name" name="userName"/>
+        Password <input placeholder="Password" name="password"/>
+        <input type="submit" name="submit" value="Log in">
+    </form>
+    <div id="msgDiv"></div>
+
+    <script>
+        const buttone = (e)=>{
+    console.log('clicked');
+}
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
