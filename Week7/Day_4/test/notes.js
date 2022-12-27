@@ -1,4 +1,5 @@
 import fs from 'fs';
+console.log('notes.js');
 
 let notesArr= [];
  try{

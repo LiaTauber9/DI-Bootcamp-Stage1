@@ -9,6 +9,7 @@
 
 // const fs = require('fs');
 import {addNote, readNote, notesList, deleteNote} from "./notes.js"
+import {start} from './start.js'
 import fs from 'fs';
 import _yargs from 'yargs';
 import { hideBin } from 'yargs/helpers';
@@ -23,18 +24,18 @@ const action = argv._[0];
 
 
 
-switch(action){
-    case 'add': console.log(addNote(newItem)); break;
-    case 'read': console.log(readNote(newItem)); break;
-    case 'list': {
-        const list = notesList();
-        if(list.length>0){
-            for(const item of list){console.log( `Title: ${item.title} Note: ${item.body} `)}
-        }else{console.log('List is empty')}       
-    } break;
-    case 'remove': console.log(deleteNote(newItem)); break;
-    default: console.log('action not found');
-}
+// switch(action){
+//     case 'add': console.log(addNote(newItem)); break;
+//     case 'read': console.log(readNote(newItem)); break;
+//     case 'list': {
+//         const list = notesList();
+//         if(list.length>0){
+//             for(const item of list){console.log( `Title: ${item.title} Note: ${item.body} `)}
+//         }else{console.log('List is empty')}       
+//     } break;
+//     case 'remove': console.log(deleteNote(newItem)); break;
+//     default: console.log('action not found');
+// }
 
 
 
