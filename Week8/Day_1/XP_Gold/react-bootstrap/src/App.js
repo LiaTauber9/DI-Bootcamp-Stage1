@@ -2,6 +2,9 @@ import React from 'react';
 import './App.css';
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BootstrapCard } from './components/BootstrapCard';
+import { Planets } from './components/Planets';
+
+
 
 const celebrities = [
   {
@@ -25,18 +28,20 @@ const celebrities = [
 
 export const App = ()=> {
     return(
-      celebrities.map((item,index)=>{
-          return(
-            <BootstrapCard 
-        key={index}
-        title={item.title} 
-        imageUrl={item.imageUrl} 
-        buttonLabel={item.buttonLabel}
-        buttonUrl={item.buttonUrl}
-        description={item.description}/>
-          )
-        }
-      ) 
+      // celebrities.map((item,index)=>{
+      //     return(
+      //       <BootstrapCard 
+      //   key={index}
+      //   title={item.title} 
+      //   imageUrl={item.imageUrl} 
+      //   buttonLabel={item.buttonLabel}
+      //   buttonUrl={item.buttonUrl}
+      //   description={item.description}/>
+      //     )
+      //   }
+      // ) 
+
+      <Planets />
     )            
       }
 
