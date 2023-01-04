@@ -1,10 +1,14 @@
-import { Form } from './components/Forms';
+// import { Form } from './components/Forms';
+// import { BooksForm } from './components/BooksForm';
+import { Wellcome } from './components/Wellcome';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <Form />
+      {/* <Form /> */}
+      {/* <BooksForm /> */}
+      <Wellcome />
     </div>
   );
 }
