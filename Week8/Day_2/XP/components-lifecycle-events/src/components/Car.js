@@ -1,4 +1,5 @@
-import React from 'react';import { Garage } from './Garage';
+import React from 'react';
+import { Garage } from './Garage';
 
 export class Car extends React.Component{
     constructor(){
