@@ -4,7 +4,7 @@ import Button from '@mui/material/Button';
 import {useNavigate} from 'react-router-dom';
 import axios from 'axios';
 import {useState,useEffect,useContext} from 'react';
-import {AppContext} from '../App';
+import AppContext from '../App';
 
 const LoginRegisterForm = (props)=>{
     const [email, setEmail] = useState('');
@@ -25,7 +25,7 @@ const LoginRegisterForm = (props)=>{
                 setToken(response.data.token);
                 setMsg('');
                 navigate('/home')
-            }catch(er){setMsg(e.response.data.msg)}
+            }catch(er){setMsg(er.response.data.msg)}
         }else{
 
         }

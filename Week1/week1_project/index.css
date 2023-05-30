@@ -25,3 +25,45 @@
     height: 30vh;
     width: fit-content;
 }
+.contact_icons{
+    display: flex;
+    gap: 7px;
+    align-items: center;
+    justify-content: center;
+    padding: 7px;
+}
+/* .cont_det_box{
+    position: relative;
+    height: 0px;
+    width: max-content;
+}
+a:hover .cont_det_box{
+    height: max-content;
+    transform: rotate(-15deg);
+    transition: all 0.3s;
+    position: absolute;
+    right: 10px;
+    top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+} */
+.cont_det_box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+}
+
+#cont_det{
+    z-index: 800;
+    display: none;
+    position: absolute;
+    right: 10px;
+    top: 50px;
+    background-color: white;
+    padding: 7px;
+}
